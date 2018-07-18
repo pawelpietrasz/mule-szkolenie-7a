@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:mulexml="http://www.mulesoft.org/schema/mule/xml" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd">
+    <flow name="getCitiesByCountry-flow">
+        <set-payload value="&lt;web:GetCitiesByCountryResponse xmlns:web=&quot;http://www.webserviceX.NET&quot;&gt;
+	&lt;web:GetCitiesByCountryResult&gt;{Kraj}: Warszawa&lt;/web:GetCitiesByCountryResult&gt;
+&lt;/web:GetCitiesByCountryResponse&gt;" doc:name="Set Payload"/>
+    </flow>
+    <flow name="getWeather-flow">
+        <set-payload value="&lt;web:GetWeatherResponse xmlns:web=&quot;http://www.webserviceX.NET&quot;&gt;
+    &lt;web:GetWeatherResult&gt;{Kraj}:{Miasto}. {data} 16 stopni&lt;/web:GetWeatherResult&gt;
+&lt;/web:GetWeatherResponse&gt;" doc:name="Set Payload"/>
+    </flow>
+</mule>
